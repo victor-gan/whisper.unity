@@ -88,6 +88,8 @@ namespace Whisper.Samples
                 text += $"\n\nLanguage: {res.Language}";
             
             outputText.text = text;
+            LLMManager.Instance.PromptAI(text);
+
             UiUtils.ScrollDown(scroll);
         }
         
