@@ -9,6 +9,8 @@ public class LLMManager : MonoBehaviour
     public LLMCharacter llmCharacter;
     public static LLMManager Instance;
     public Text outputText;
+    public LocationsData locationsData;
+    public Transform NavMeshTarget;
 
     void Awake(){
         Instance = this;
@@ -29,6 +31,14 @@ public class LLMManager : MonoBehaviour
     }
 
     private void HandleCode(string code){
-        Debug.Log("Code: " + code);
+        foreach(Transform location in locationsData.locations){
+            Debug.Log(location.name + code);
+            Debug.Log(code.ToLower().Contains(location.name.ToLower()));
+            if (code.ToLower().Contains(location.name.ToLower()))
+            {
+                NavMeshTarget.position = location.position;
+                break;
+            }
+        }
     }
 }
