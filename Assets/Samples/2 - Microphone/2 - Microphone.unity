@@ -11516,8 +11516,14 @@ MonoBehaviour:
   stop: []
   playerName: user
   AIName: assistant
-  prompt: A chat between a curious human and an artificial intelligence assistant.
-    The assistant gives helpful, detailed, and polite answers to the human's questions.
+  prompt: You're an assistant for the player of a game. Give concise answers. Your
+    answers should always have two parts. The first part is your normal response
+    to the player. The second part is a code for an action in the game. Separate
+    the two parts of your answer with "||". For the code part, simply name every
+    action or object that is mentioned. For example, if the player says "take the
+    spoon to the kitchen", output "take", "spoon" and "kitchen". If the player is
+    simply talking to you and not making commands, then don't output anything for
+    the code part of your reply and just talk back.
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
