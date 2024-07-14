@@ -806,7 +806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145816848}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.67, y: 1.324, z: 3.85}
+  m_LocalPosition: {x: 20.14, y: 1.324, z: 3.92}
   m_LocalScale: {x: 0.5, y: 0.52, z: 0.52}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1075,7 +1075,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.3726415, b: 0.7043426, a: 1}
+      maxColor: {r: 0.37254906, g: 0.7742244, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1137,7 +1137,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 2.82
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1600,7 +1600,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.12
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -11853,11 +11853,11 @@ MonoBehaviour:
   prompt: You're an assistant for the player of a game. Give concise answers. Your
     answers should always have two parts. The first part is your normal response
     to the player. The second part is a code for an action in the game. Separate
-    the two parts of your answer with "||". For the code part, simply name every
-    action or object that is mentioned. For example, if the player says "take the
-    spoon to the kitchen", output "take", "spoon" and "kitchen". If the player is
-    simply talking to you and not making commands, then don't output anything for
-    the code part of your reply and just talk back.
+    the two parts of your answer with "|". For the code part, simply name every action
+    or object that is mentioned. For example, if the player says "take the spoon
+    to the kitchen", output "take", "spoon" and "kitchen". End the response with
+    "~". If the player is simply talking to you and not making commands, then don't
+    output anything for the code part of your reply and just talk back.
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
